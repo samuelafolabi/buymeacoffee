@@ -48,7 +48,7 @@ contract BuyMeACoffee {
      *@dev send the entire balance stored in this contract to the owner
      */
 
-    function withdrwaTips() public {
+    function withdrawTips() public {
         require(owner.send(address(this).balance));
     }
 
