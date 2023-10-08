@@ -58,6 +58,16 @@ async function main() {
   // Check balances after the coffee purchase.
   console.log("== bought coffee ==");
   await printBalances(addresses);
+
+  //withdraw tips
+  console.log("== withdrawTips ==");
+  await buyMeACoffee.connect(owner).withdrawTips();
+  await printBalances(addresses);
+
+  //Read all the message left for the owner
+  console.log("== memos ==");
+  const memos = await buyMeACoffee.getMemos();
+  printMemos(memos);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

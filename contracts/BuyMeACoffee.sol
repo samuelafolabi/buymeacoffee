@@ -5,7 +5,7 @@ contract BuyMeACoffee {
     // Event to emit when a memoo is created
     event NewMemo(
         address indexed from,
-        uint256 timeStamp,
+        uint256 timestamp,
         string name,
         string message
     );
@@ -13,7 +13,7 @@ contract BuyMeACoffee {
     // Memo Struct
     struct Memo {
         address from;
-        uint256 timeStamp;
+        uint256 timestamp;
         string name;
         string message;
     }
